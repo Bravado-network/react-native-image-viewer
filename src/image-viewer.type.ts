@@ -98,7 +98,7 @@ export class Props {
    */
   public pageAnimateTime?: number = 100;
 
-  /** 
+  /**
    * 是否启用原生动画驱动
    * Whether to use the native code to perform animations.
    */
@@ -261,6 +261,8 @@ export class State {
    * 是否出现功能菜单
    */
   public isShowMenu?: boolean = false;
+
+  public loadingImages?: { loading: boolean }[] = [];
 }
 
 export interface IImageInfo {

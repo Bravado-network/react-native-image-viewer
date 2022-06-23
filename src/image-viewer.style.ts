@@ -1,4 +1,4 @@
-import { TextStyle, ViewStyle } from 'react-native';
+import { TextStyle, ViewStyle, StyleSheet } from 'react-native';
 
 export default (
   width: number,
@@ -8,8 +8,19 @@ export default (
   [x: string]: ViewStyle | TextStyle;
 } => {
   return {
-    modalContainer: { backgroundColor, justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
-    watchOrigin: { position: 'absolute', width, bottom: 20, justifyContent: 'center', alignItems: 'center' },
+    modalContainer: {
+      backgroundColor,
+      justifyContent: 'center',
+      alignItems: 'center',
+      overflow: 'hidden'
+    },
+    watchOrigin: {
+      position: 'absolute',
+      width,
+      bottom: 20,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
     watchOriginTouchable: {
       paddingLeft: 10,
       paddingRight: 10,
@@ -24,7 +35,14 @@ export default (
     imageStyle: {},
     container: { backgroundColor }, // 多图浏览需要调整整体位置的盒子
     moveBox: { flexDirection: 'row', alignItems: 'center' },
-    menuContainer: { position: 'absolute', width, height, left: 0, bottom: 0, zIndex: 12 },
+    menuContainer: {
+      position: 'absolute',
+      width,
+      height,
+      left: 0,
+      bottom: 0,
+      zIndex: 12
+    },
     menuShadow: {
       position: 'absolute',
       width,
@@ -35,7 +53,13 @@ export default (
       opacity: 0.2,
       zIndex: 10
     },
-    menuContent: { position: 'absolute', width, left: 0, bottom: 0, zIndex: 11 },
+    menuContent: {
+      position: 'absolute',
+      width,
+      left: 0,
+      bottom: 0,
+      zIndex: 11
+    },
     operateContainer: {
       justifyContent: 'center',
       alignItems: 'center',
@@ -46,9 +70,28 @@ export default (
     },
     operateText: { color: '#333' },
     loadingTouchable: { width, height },
-    loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-    arrowLeftContainer: { position: 'absolute', top: 0, bottom: 0, left: 0, justifyContent: 'center', zIndex: 13 },
-    arrowRightContainer: { position: 'absolute', top: 0, bottom: 0, right: 0, justifyContent: 'center', zIndex: 13 }
+    loadingContainer: {
+      ...StyleSheet.absoluteFillObject,
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    arrowLeftContainer: {
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      justifyContent: 'center',
+      zIndex: 13
+    },
+    arrowRightContainer: {
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      right: 0,
+      justifyContent: 'center',
+      zIndex: 13
+    }
   };
 };
 

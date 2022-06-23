@@ -5,12 +5,13 @@
   "main": "built/index.js",
   "types": "built/index.d.ts",
   "scripts": {
-    "prepare": "rm -rf built && tsc",
+    "compile": "rm -rf built && tsc",
+    "prepare": "yarn compile",
     "start": "tsc -w --outDir demo/built"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ascoders/react-native-image-viewer.git"
+    "url": "https://github.com/Bravado-network/react-native-image-viewer.git"
   },
   "keywords": [
     "image-viewer"
@@ -22,7 +23,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-fast-image": "*"
   },
   "devDependencies": {
     "@types/react": "*",
@@ -30,6 +32,7 @@
     "ascoders-tslint-config": "^1.0.2",
     "react": "*",
     "react-native": "*",
+    "react-native-fast-image": "*",
     "tslint": "^5.8.0",
     "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.9.2"
