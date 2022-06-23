@@ -6,7 +6,6 @@
   "types": "built/index.d.ts",
   "scripts": {
     "compile": "rm -rf built && tsc",
-    "prepare": "yarn compile",
     "start": "tsc -w --outDir demo/built"
   },
   "repository": {
